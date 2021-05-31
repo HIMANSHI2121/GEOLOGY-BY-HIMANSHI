@@ -30,6 +30,7 @@ var d1i, d2i;
 var c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
 var c1i, c2i, c3i, c4i, c5i;
 function preload(){
+  cri = loadImage("images/crash.png");
   //===========================================
   //truck
   //===========================================
@@ -128,80 +129,95 @@ function setup() {
   //===========================================
   //city
   //===========================================
+  b1 = createSprite(390,640,380,60);
+  b1.shapeColor = "#E0C193";
+  b2 = createSprite(820,640,355,60);
+  b2.shapeColor = "#E0C193";
+  b3 = createSprite(79,630,130,130);
+  b3.shapeColor = "#E0C193";
+  b4 = createSprite(1130,630,155,125);
+  b4.shapeColor = "#E0C193";
+  b5 = createSprite(110,490,194,82);
+  b5.shapeColor = "#E0C193";
+  b6 = createSprite(337,512,275,127);
+  b6.shapeColor = "#E0C193";
+  b7 = createSprite(107,387,190,50);
+  b7.shapeColor = "red";
+  b8 = createSprite(336,345,275,135);
+  b8.shapeColor = "#E0C193";
+  b9 = createSprite(68,255,130,150);
+  b9.shapeColor = "#E0C193";
+  b9i = createSprite(70,55,130,180);
+  b9i.shapeColor = "red";
+  b10 = createSprite(1128,490,155,85);
+  b10.shapeColor = "#E0C193";
+  b11 = createSprite(1096,389,220,54);
+  b11.shapeColor = "#E0C193";
+  b12 = createSprite(873,469,236,213);
+  b12.shapeColor = "#E0C193";
+  b13 = createSprite(385,20,375,80);
+  b13.shapeColor = "#E0C193";
+  b14 = createSprite(813,20,350,80);
+  b14.shapeColor = "#E0C193";
+  b15 = createSprite(1150,20,200,255);
+  b15.shapeColor = "#E0C193";
+  b16 = createSprite(1150,255,200,150);
+  b16.shapeColor = "#E0C193";
+  b17 = createSprite(871,233,235,190);
+  b17.shapeColor = "#E0C193";
+  b18 = createSprite(645,120,685,50);
+  b18.shapeColor = "#E0C193";
+  b19 = createSprite(250,170,106,150);
+  b19.shapeColor = "#E0C193";
+  b20 = createSprite(614,376,150,395);
+  b20.shapeColor = "#E0C193";
+  b21 = createSprite(455,210,180,60);
+  b21.shapeColor = "#E0C193";
+  //
   r1 = createSprite(393,640,370,50);
   r1.shapeColor = "#65a641";
-  b1 = new CC(390,640,380,60);
   r2 = createSprite(817,640,340,50);
   r2.shapeColor = "#65a641";
-  b2 = new CC(820,640,355,60);
   r3 = createSprite(75,630,123,120);
   r3.shapeColor = "#65a641";
-  b3 = new CC(79,630,130,130);
   r4 = createSprite(1128,630,143,120);
   r4.shapeColor = "#65a641";
-  b4 = new CC(11130,630,155,125);
   r5 = createSprite(107,490,187,75);
   r5.shapeColor = "#65a641";
-  b5 = new CC(110,490,194,82);
   r6 = createSprite(339,512,260,113);
   r6.shapeColor = "#65a641";
-  b6 = new CC(337,512,275,127);
   r7 = createSprite(105,390,185,40);
   r7.shapeColor = "#65a641";
-  b7= new CC(107,387,190,50);
   r8 = createSprite(340,346,255,125);
   r8.shapeColor = "#65a641";
-  b8 = new CC(336,345,275,135);
   r9 = createSprite(68,255,110,130);
   r9.shapeColor = "#65a641";
-  b9 = new CC(68,255,130,150);
   r9i = createSprite(70,55,117,170);
   r9i.shapeColor = "#65a641";
-  b9i = new CC(70,55,130,180);
   r10 = createSprite(1128,490,140,80);
   r10.shapeColor = "#65a641";
-  b10 = new CC(1128,490,155,85);
   r11 = createSprite(1096,390,205,40);
   r11.shapeColor = "#65a641";
-  b11 = new CC(1096,389,220,54);
   r12 = createSprite(870,470,210,200);
   r12.shapeColor = "#65a641";
-  b12 = new CC(873,469,236,213);
   r13 = createSprite(385,20,350,70);
   r13.shapeColor = "#65a641";
-  b13 = new CC(385,20,375,80);
   r14 = createSprite(815,20,325,70);
   r14.shapeColor = "#65a641";
-  b14 = new CC(813,20,350,80);
   r15 = createSprite(1150,20,170,250);
   r15.shapeColor = "#65a641";
-  b15 = new CC(1150,20,200,255);
   r16 = createSprite(1150,255,180,130);
   r16.shapeColor = "#65a641";
-  b16 = new CC(1150,255,200,150);
   r17 = createSprite(870,236,210,170);
   r17.shapeColor = "#65a641";
-  b17 = new CC(871,233,235,190);
   r18 = createSprite(647,120,667,40);
   r18.shapeColor = "#65a641";
-  b18 = new CC(645,120,685,50);
   r19 = createSprite(250,170,90,140);
   r19.shapeColor = "#65a641";
-  b19 = new CC(250,170,106,150);
   r20 = createSprite(614,375,130,383);
   r20.shapeColor = "#65a641";
-  b20 = new CC(614,376,150,395);
   r21 = createSprite(455,210,160,50);
   r21.shapeColor = "#65a641";
-  b21 = new CC(455,210,180,60);
-  //===========================================
-  //ball
-  //===========================================
-  var ball_options={
-    isStatic:true
-  }
-  ball = Bodies.circle(340,265,20,ball_options);
-  World.add(world,ball);
   
   //===========================================
   //hospitals
@@ -209,7 +225,7 @@ function setup() {
   ho1 = createSprite(1190,590,20,20);
   ho1.addImage(ho2Img);
   ho1.scale = 0.14;
-  
+
   //===========================================
   //Houses
   //===========================================
@@ -2187,15 +2203,20 @@ function setup() {
   d1 = createSprite(940,183,10,10);
   d1.addImage(d12i);
   d1.scale = 0.19;
-  d1 = createSprite(340,263,10,10);
-  d1.addImage(d6i);
-  d1.scale = 0.3;
+  //d1 = createSprite(340,263,10,10);
+  //d1.addImage(d6i);
+  //d1.scale = 0.3;
+
   //===========================================
   //cars
   //===========================================
-  c1 = createSprite(140,200,20,20);
+  if(frameCount%120 === 0){
+  c1 = createSprite(142,200,20,20);
+  //var c1.y=Math.round(random(10,350));
+  //if(c1.collide())
   c1.addImage(c1i);
   c1.scale = 0.2;
+  c1.setVelocity(0,-3);
   c2 = createSprite(1010,470,20,20);
   c2.addImage(c2i);
   c2.scale = 0.2;
@@ -2208,6 +2229,7 @@ function setup() {
   c5 = createSprite(1010,100,20,20);
   c5.addImage(c5i);
   c5.scale = 0.2;
+  }
   
   //===========================================
   //truck
@@ -2215,7 +2237,7 @@ function setup() {
   truck = createSprite(595, 630, 10, 30);
   truck.addImage(tImg1);
   truck.scale = 0.1;
-  truck.setCollider("rectangle",0,0,truck.width*5,truck.height*2);
+  truck.setCollider("rectangle",0,0,300,305);
   truck.debug = true;
 
   //===========================================
@@ -2254,32 +2276,166 @@ function setup() {
   minus = createSprite(1050,580,20,20);
   minus.addImage(minusImg);
   minus.scale = 0.1;
+  //
+  crash = createSprite(600,325,1200,650);
+  crash.addImage(cri);
+  crash.visible = false;
 }
 
 function draw() {
   background("#333333");
   //#56575B
   Engine.update(engine);
-  ellipseMode(RADIUS);
-  fill("#65a641");
-  stroke("#E0C196");
-  strokeWeight(4)
-  ellipse(ball.position.x,ball.position.y,20);
-
-  if(isTouching(truck,b1)){
+  /*if(truck.isTouching(b1) || truck.isTouching(b2) || truck.isTouching(b3) || truck.isTouching(b4) || truck.isTouching(b5) || truck.isTouching(b6) || truck.isTouching(b7) || truck.isTouching(b8) || truck.isTouching(b9) || truck.isTouching(b9i) || truck.isTouching(b10) || truck.isTouching(b11) || truck.isTouching(b12) || truck.isTouching(b13) || truck.isTouching(b14) || truck.isTouching(b15) || truck.isTouching(b16) || truck.isTouching(b17) || truck.isTouching(b18) || truck.isTouching(b19) || truck.isTouching(b20) || truck.isTouching(b21)){
     truck.velocityX=0;
     truck.velocityY=0;
-  }
+  }*/
   
 
   edges= createEdgeSprites();
   truck.collide(edges);
+  truck.collide(c1);
+  truck.collide(c2);
+  truck.collide(c3);
+  truck.collide(c4);
+  truck.collide(c5);
+  truck.collide(b1);
+  truck.collide(b2);
+  truck.collide(b3);
+  truck.collide(b4);
+  truck.collide(b5);
+  truck.collide(b6);
+  truck.collide(b7);
+  truck.collide(b8);
+  truck.collide(b9);
+  truck.collide(b9i);
+  truck.collide(b10);
+  truck.collide(b11);
+  truck.collide(b12);
+  truck.collide(b12);
+  truck.collide(b13);
+  truck.collide(b14);
+  truck.collide(b15);
+  truck.collide(b16);
+  truck.collide(b17);
+  truck.collide(b18);
+  truck.collide(b19);
+  truck.collide(b20);
+  truck.collide(b21);
+  //car1
+  c1.bounceOff(edges)
+  c1.collide(b1);
+  c1.collide(b2);
+  c1.collide(b3);
+  c1.collide(b4);
+  c1.collide(b5);
+  c1.collide(b6);
+  c1.collide(b7);
+  c1.collide(b8);
+  c1.collide(b9);
+  c1.collide(b9i);
+  c1.collide(b10);
+  c1.collide(b11);
+  c1.collide(b12);
+  c1.collide(b12);
+  c1.collide(b13);
+  c1.collide(b14);
+  c1.collide(b15);
+  c1.collide(b16);
+  c1.collide(b17);
+  c1.collide(b18);
+  c1.collide(b19);
+  c1.collide(b20);
+  c1.collide(b21);
+  //car2
+  c2.collide(b1);
+  c2.collide(b2);
+  c2.collide(b3);
+  c2.collide(b4);
+  c2.collide(b5);
+  c2.collide(b6);
+  c2.collide(b7);
+  c2.collide(b8);
+  c2.collide(b9);
+  c2.collide(b9i);
+  c2.collide(b10);
+  c2.collide(b11);
+  c2.collide(b12);
+  c2.collide(b12);
+  c2.collide(b13);
+  c2.collide(b14);
+  c2.collide(b15);
+  c2.collide(b16);
+  c2.collide(b17);
+  c2.collide(b18);
+  c2.collide(b19);
+  c2.collide(b20);
+  c2.collide(b21);
+  //car3
+  c3.collide(b1);
+  c3.collide(b2);
+  c3.collide(b3);
+  c3.collide(b4);
+  c3.collide(b5);
+  c3.collide(b6);
+  c3.collide(b7);
+  c3.collide(b8);
+  c3.collide(b9);
+  c3.collide(b9i);
+  c3.collide(b10);
+  c3.collide(b11);
+  c3.collide(b12);
+  c3.collide(b12);
+  c3.collide(b13);
+  c3.collide(b14);
+  c3.collide(b15);
+  c3.collide(b16);
+  c3.collide(b17);
+  c3.collide(b18);
+  c3.collide(b19);
+  c3.collide(b20);
+  c3.collide(b21);
+  //car4
+  c4.collide(b1);
+  c4.collide(b2);
+  c4.collide(b3);
+  c4.collide(b4);
+  c4.collide(b5);
+  c4.collide(b6);
+  c4.collide(b7);
+  c4.collide(b8);
+  c4.collide(b9);
+  c4.collide(b9i);
+  c4.collide(b10);
+  c4.collide(b11);
+  c4.collide(b12);
+  c4.collide(b12);
+  c4.collide(b13);
+  c4.collide(b14);
+  c4.collide(b15);
+  c4.collide(b16);
+  c4.collide(b17);
+  c4.collide(b18);
+  c4.collide(b19);
+  c4.collide(b20);
+  c4.collide(b21);
   
+  if(truck.isTouching(c1) || truck.isTouching(c2) || truck.isTouching(c3) || truck.isTouching(c4) ||truck.isTouching(c5)){
+   
+    crash.visible = true
+    /*background("#ff0280");
+    fill("cyan");
+    stroke("black");
+    textSize(20);
+    textFont("Casteller");
+    text("OOps!!  'CRASH' ", 550,325);*/
+  }
+
   if(mousePressedOver(brake)){
     truck.velocityX = 0;
     truck.velocityY = 0;
   }
-
+  
   //===========================================
    //movement
    //===========================================
@@ -2452,32 +2608,7 @@ function draw() {
     stroke("white");
     line(i,260,i+10,260);
   }
-  
-  
-  //c.display();
-  fill("red");
-  b1.display();
-  b2.display();
-  b3.display();
-  b4.display();
-  b5.display();
-  b6.display();
-  b7.display();
-  b8.display();
-  b9.display();
-  b9i.display();
-  b10.display();
-  b11.display();
-  b12.display();
-  b13.display();
-  b14.display();
-  b15.display();
-  b16.display();
-  b17.display();
-  b18.display();
-  b19.display();
-  b20.display();
-  b21.display();
+
 
   drawSprites();
   }
